@@ -28,3 +28,15 @@ const Modal = (props) => {
 }
 
 export default Modal
+
+
+
+
+{/* <div className="App">
+      <h1>pokemon</h1>
+      <p>Name: {data.name}</p>
+      <p>Weight: {data.weight}</p>
+      <p>Base Experience: {data.base_experience}</p>
+      <img src={data.sprites.front_default} alt="Pokemon"></img>
+      <p>{data.types[0].type.name}</p>
+    </div> */}
