@@ -45,7 +45,7 @@ button:hover{
 body{
   display: flex;
   justify-content: center;
-  background: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/coast.jpg);
+  background: url(https://st2.depositphotos.com/3213441/12022/v/950/depositphotos_120226584-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg);
    no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -210,6 +210,7 @@ background-color: #32cb65;
   height: 45%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -359,6 +360,14 @@ background-color: #32cb65;
   justify-content: center;
   text-align: left;
   line-height: 2;
+}
+
+.stat {
+  display: flex;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
 }
 
 .square-buttons-container {

@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import Form from './Form'
-import ShoppingList from './ShoppingList'
+import PokemonList from './PokemonList'
 
 function App() {
-
   const [list, setList] = useState([])
- 
 
   function handleAddItem(newItem) {
     setList([...list, { name: newItem, isActive: false }])
@@ -27,7 +25,7 @@ function App() {
         <div className="page-container">
           <h1 className="heading">Thought for Food</h1>
           <Form handleAddItem={handleAddItem} />
-          <ShoppingList
+          <PokemonList
             onDelete={handleDelete}
             list={list}
             onListChange={handleListChange}
