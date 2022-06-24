@@ -245,11 +245,15 @@ background-color: #32cb65;
 }
 
 .screen{
+  padding: 0.75rem;
+  display: flex;
   border-style: solid;
-    border-width: thick;
-    height: 80%;
-    width: 80%;
-    background: #98cb97;
+  border-width: thick;
+  height: 80%;
+  width: 80%;
+  background: #98cb97;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 

@@ -41,9 +41,9 @@ const Modal = (props) => {
                   className="image-body"
                 />
                 {/* pokemon image to go in here */}
+                <div className="pokemon-name">{data.name}</div>
               </div>
             </div>
-            <div className="pokemon-name">{data.name}</div>
           </div>
           <div className="pokedex-bottom">
             <div className="first-third a">
