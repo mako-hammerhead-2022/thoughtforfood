@@ -1,8 +1,4 @@
 
-.modal-content {
-  width: 15rem;
-  background: red;
-}
 
 .modal {
   position: fixed;
@@ -25,10 +21,9 @@
   margin: 0;
 }
 
-.modal-body {
-  padding: 10px;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+.image-body {
+  width: 100%;
+  height: 100%;
 }
 
 html *
@@ -50,12 +45,18 @@ button:hover{
 body{
   display: flex;
   justify-content: center;
-  background: url(/images/background.png);
-}
+  background: url(https://st2.depositphotos.com/3213441/12022/v/950/depositphotos_120226584-stock-illustration-pokemon-go-pokeball-seamless-texture.jpg);
+   no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 
 #app{
   display: flex;
-    width: 90%;
+    width: 70%;
     border-radius: 2rem;
     border-style: solid;
     justify-content: center;
@@ -105,6 +106,7 @@ form{
   justify-content: center;
   border-bottom-style: solid;
   justify-content: space-between;
+  border-radius: 1rem;
   padding: 1rem;
   border-style: solid;
   margin-bottom: 0.25rem;
@@ -124,7 +126,340 @@ form{
 
 .heading{
   font-size: 5rem;
-};
+}
+
+.pokedex-icon{
+  height: 6rem;
+}
+
+.pokedex-icon:hover{
+  border-radius: 1rem;
+  border-style: solid;
+  border-color: gray;
+  cursor: pointer;
+}
+
+.pokedex-container{
+  background-color: #ff0066;
+  border-radius: 1.5rem;
+  height: 90%;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr .1fr 1fr;
+  border-style: solid;
+  border-width: thick;
+}
+
+.pokedex-hinge{
+  border-style: none solid none solid;
+  border-width: thick;
+}
+
+.pokedex-top{
+  height: 20%;
+  width: 100%;
+}
+
+.pokedex-lights{
+  height: 100%;
+    display: flex;
+    /* grid-template-columns: 2fr 1fr 1fr; */
+    margin: 1rem 0rem 0rem 1rem;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.main-light{
+  border-style: solid;
+    border-width: thick;
+    border-radius: 50%;
+    background-color: #3298ca;
+    height: 60%;
+    width: 20%;
+}
+
+.small-light-container{
+  display: flex;
+  flex-direction: row;
+  width: 35%;
+  margin-left: 10%;
+
+}
+
+.small-light{
+  border-style: solid;
+  border-width: thick;
+  height: 15%;
+  width: 15%;
+  border-radius: 50%;
+}
+
+.red{
+background-color: #f00;
+}
+
+.yellow{
+background-color: #fecb64;
+}
+
+.green{
+background-color: #32cb65;
+}
+
+.pokedex-mid{
+  height: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokedex-screen-container{
+  border-right: solid;
+    width: 100%;
+    height: 100%;
+    border-width: thick;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen-container{
+  height: 90%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  border-width: thick;
+  justify-content: center;
+  border-radius: 0 0 0 2rem;
+  background: #dfdedc
+}
+
+.screen{
+  border-style: solid;
+    border-width: thick;
+    height: 80%;
+    width: 80%;
+    background: #98cb97;
+}
+
+
+.pokedex-bottom{
+  width: 100%;
+  height: 35%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+}
+
+.a{
+  height: 100%;
+}
+
+.joystick{
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  border-style: solid;
+  border-width: thick;
+  border-radius: 50%;
+  background-color: #59585a;
+  height: 25%;
+  width: 80%;
+}
+
+.thin-buttons{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.b{
+  width: 30%;
+  height: 0.3rem;
+  border-style: solid;
+  border-width: thick;
+  border-radius: 0.5rem;
+}
+
+.red-button{
+  background-color: #ff0000;
+}
+
+.blue-button{
+  background-color: #85bdfe
+}
+
+
+.rectangle-div{
+  height: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.rectangle{
+  height: 5rem;
+  width: 80%;
+  border-style: solid;
+  border-width: thick;
+  border-radius: 0.5rem;
+  background-color: #3ab47c;
+}
+
+
+.third-third{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dpad1{
+  height: 1.5rem;
+    width: 5rem;
+    background: #585858;
+}
+
+.dpad2{
+  height: 5rem;
+    width: 1.5rem;
+    background: #585858;
+}
+
+
+/* Start of Right panel */
+.pokedex-right-panel {
+  background-color: #ff0066;
+}
+
+.empty-top-bar {
+  height: 20%;
+}
+
+.mid-stat-buttons {
+  height: 40%;
+}
+
+.stat-screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-screen {
+  width: 80%;
+  height: 100px;
+  background-color: #9e9d9d;
+  border: solid black 2px;
+  border-radius: 4px;
+  font-size: xx-small;
+  padding: 0 2px 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  line-height: 2;
+}
+
+.stat {
+  display: flex;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding: 0;
+}
+
+.square-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+.ability-buttons-container {
+  width: 70%;
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.ability-button {
+  padding: 0 5px 0;
+  border-radius: 2px;
+  border: black 1.5px solid;
+  background-color: #7ca9f7;
+  box-shadow: inset -2px -2px #3298cb;
+}
+
+.lower-buttons-container {
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.lower-left-container {
+  display: grid;
+}
+
+.red-dots-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.red-dot {
+  border: solid black 2px;
+  width: 100%;
+  height: 15%;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-color: #ff0000;
+  border-radius: 50%;
+}
+
+.small-light-red {
+  height: 2.5px;
+  width: 2.5px;
+  top: 4px;
+  left: 2px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #fe98cb;
+}
+
+.white-squares-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.white-square {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: black 2px solid;
+  background-color: #ffffff;
+  box-shadow: inset -2px -2px grey;
+}
+
+.lower-right-container {
+  display: grid;
+}
+
+.grey-buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grey-button {
+  width: 50px;
+  height: 0.3rem;
+  border: 2px solid black;
+  background-color: #585858;
+  margin-left: 10px;
+}
 
 @media screen and (max-width: 1200px) {
  
