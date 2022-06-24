@@ -23,7 +23,7 @@ function App() {
     <>
       <div className="main">
         <div className="page-container">
-          <img src="images/pokemon.png" />
+          <img className="header-img" src="images/pokemon.png" />
           <Form handleAddItem={handleAddItem} />
           <PokemonList
             onDelete={handleDelete}

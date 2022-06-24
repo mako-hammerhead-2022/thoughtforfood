@@ -93,6 +93,10 @@ form{
     align-items: center;
 }
 
+.header-img{
+  height: 13rem;
+}
+
 .list-container{
   width: 100%;
 }

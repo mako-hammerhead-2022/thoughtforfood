@@ -51,6 +51,8 @@ export default function ShoppingList(props) {
             src="/images/pokedex-icon.jpg"
             onClick={() => handlePokedexClick(listItem)}
           />
+
+          {/* ngairo */}
           <Modal
             pokemonName={pokemonName}
             onClose={() => setShow(false)}
