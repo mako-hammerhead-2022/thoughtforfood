@@ -10,8 +10,8 @@ const Modal = (props) => {
   const { data } = useFetch(
     `https://pokeapi.co/api/v2/pokemon/${props.pokemonName}`
   )
-   console.log(data)
-  
+  console.log(data)
+
   //image setter
   const imageSrc = data.sprites?.front_default
   useEffect(() => {
@@ -21,20 +21,22 @@ const Modal = (props) => {
   const stats = `Height: ${data.height} Weight: ${data.weight}`
   // const type = `Type: ${data.types[0]?.type.name}`
 
-  const clickHandler = (infoType) => {
-    console.log(infoType)
-    switch(infoType){
-      case 'stats':
-      setPokemonInfo(stats)
-      break
-      // case 'type':
-      // setPokemonInfo(type)
-      // break
-      default:
-        console.log('Nothing to show')
+  const clickHandler = (infoType, e) => {
+    useEffect(() => {
+      console.log(infoType)
+      switch (infoType) {
+        case 'stats':
+          setPokemonInfo(stats)
+          break
+        // case 'type':
+        // setPokemonInfo(type)
+        // break
+        default:
+          console.log('Nothing to show')
+    }, [infoType])
+    
     }
   }
-
 
   if (!props.show) {
     return null
@@ -113,8 +115,14 @@ const Modal = (props) => {
             {/* Square buttons */}
             <div className="square-buttons-container">
               <div className="ability-buttons-container">
-                <div className="stats ability-button" onClick={clickHandler('stats')}></div>
-                <div className="type ability-button" onClick={clickHandler('type')}></div>
+                <div
+                  className="stats ability-button"
+                  onClick={clickHandler('stats')}
+                ></div>
+                <div
+                  className="type ability-button"
+                  onClick={clickHandler('type')}
+                ></div>
                 <div className="ability-button"></div>
                 <div className="ability-button"></div>
                 <div className="ability-button"></div>
@@ -162,14 +170,13 @@ const Modal = (props) => {
 
 export default Modal
 
-
-
-
-{/* <div className="App">
+{
+  /* <div className="App">
       <h1>pokemon</h1>
       <p>Name: {data.name}</p>
       <p>Weight: {data.weight}</p>
       <p>Base Experience: {data.base_experience}</p>
       <img src={data.sprites.front_default} alt="Pokemon"></img>
       <p>{data.types[0].type.name}</p>
-    </div> */}
+    </div> */
+}
