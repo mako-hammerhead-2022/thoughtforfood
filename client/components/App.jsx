@@ -23,7 +23,7 @@ function App() {
     <>
       <div className="main">
         <div className="page-container">
-          <h1 className="heading">Thought for Food</h1>
+          <img src="images/pokemon.png" />
           <Form handleAddItem={handleAddItem} />
           <PokemonList
             onDelete={handleDelete}
