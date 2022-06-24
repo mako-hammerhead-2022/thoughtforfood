@@ -35,13 +35,13 @@ const Modal = (props) => {
           <div className="pokedex-mid">
             <div className="screen-container">
               <div className="screen">
+                <div className="pokemon-name">{data.name}</div>
                 <img
                   src={pokemonImg}
                   alt="get Pokemon"
                   className="image-body"
                 />
                 {/* pokemon image to go in here */}
-                <div className="pokemon-name">{data.name}</div>
               </div>
             </div>
           </div>
