@@ -1,18 +1,40 @@
 import React, { useState, useEffect } from 'react'
 import useFetch from '../useFetch'
+/* import { clickHandler } from './StatChanger' */
 
 const Modal = (props) => {
   const [pokemonImg, setPokemonImg] = useState('')
+  const [pokemonInfo, setPokemonInfo] = useState('')
 
+  //data stuff
   const { data } = useFetch(
     `https://pokeapi.co/api/v2/pokemon/${props.pokemonName}`
   )
-
+   console.log(data)
+  
+  //image setter
   const imageSrc = data.sprites?.front_default
-
   useEffect(() => {
     setPokemonImg(imageSrc)
   }, [data])
+
+  const stats = `Height: ${data.height} Weight: ${data.weight}`
+  // const type = `Type: ${data.types[0]?.type.name}`
+
+  const clickHandler = (infoType) => {
+    console.log(infoType)
+    switch(infoType){
+      case 'stats':
+      setPokemonInfo(stats)
+      break
+      // case 'type':
+      // setPokemonInfo(type)
+      // break
+      default:
+        console.log('Nothing to show')
+    }
+  }
+
 
   if (!props.show) {
     return null
@@ -83,16 +105,16 @@ const Modal = (props) => {
             <div className="stat-screen-container">
               <div id="stat-screen" className="stat-screen">
                 <div>
-                  <p className="stat">Height:{data.height}</p>
-                  <p className="stat">Weight:{data.weight}</p>
+                  {/* <StatChanger/> */}
+                  <p className="stat">{pokemonInfo}</p>
                 </div>
               </div>
             </div>
             {/* Square buttons */}
             <div className="square-buttons-container">
               <div className="ability-buttons-container">
-                <div className="ability-button"></div>
-                <div className="ability-button"></div>
+                <div className="stats ability-button" onClick={clickHandler('stats')}></div>
+                <div className="type ability-button" onClick={clickHandler('type')}></div>
                 <div className="ability-button"></div>
                 <div className="ability-button"></div>
                 <div className="ability-button"></div>
